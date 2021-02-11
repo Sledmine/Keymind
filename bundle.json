@@ -1,0 +1,13 @@
+{
+    "name": "Ancient",
+    "target": "lua53",
+    "include": [
+        "modules\\"
+    ],
+    "modules": [
+        "blam",
+        "features.core"
+    ],
+    "main":"ancient",
+    "output": "dist\\ancient.lua"
+}
