@@ -10,5 +10,5 @@
         "theflood.weapons"
     ],
     "main":"ancient",
-    "output": "dist\\ancient.lua"
+    "output": "dist\\ancient_dev.lua"
 }
