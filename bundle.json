@@ -6,7 +6,8 @@
     ],
     "modules": [
         "blam",
-        "features.core"
+        "theflood.core",
+        "theflood.weapons"
     ],
     "main":"ancient",
     "output": "dist\\ancient.lua"

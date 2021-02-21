@@ -62,4 +62,17 @@ function core.rotateObject(objectId, yaw, pitch, roll)
     tempObject.v2Z = rotation[6]
 end
 
+--- Find the path, index and id of a tag given partial name of the tag and tag type
+---@param partialName string
+---@param searchTagType string
+function core.findTag(partialName, searchTagType)
+    for tagIndex = 0, blam.tagDataHeader.count - 1 do
+        local tempTag = blam.getTag(tagIndex)
+        if (tempTag and tempTag.path:find(partialName) and tempTag.class == searchTagType) then
+            return {path = tempTag.path, id = tempTag.id, index = tempTag.index}
+        end
+    end
+    return nil
+end
+
 return core
