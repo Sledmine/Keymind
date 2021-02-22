@@ -9,8 +9,12 @@ blam = require "blam"
 tagClasses = blam.tagClasses
 objectClasses = blam.objectClasses
 
-function OnTick()
+local abilities = require "theflood.abilities"
+local weapons = require "theflood.weapons"
 
+function OnTick()
+    abilities.thruster()
+    weapons.rotateWeaponsInPads()
 end
 
 set_callback("tick", "OnTick")

@@ -2,10 +2,10 @@ local core = require "theflood.core"
 
 local weapons = {}
 
-local animatedCrosshairsTags = {
+--[[local animatedCrosshairsTags = {
     core.findTag("fuel_rod", tagClasses.weaponHudInterface).path,
     core.findTag("shotgun_m90", tagClasses.weaponHudInterface).path
-}
+}]]
 
 function weapons.animateCrosshairs()
     for crosshairNumber, crosshairTagPath in pairs(animatedCrosshairsTags) do
@@ -52,7 +52,5 @@ function weapons.rotateWeaponsInPads()
         end
     end
 end
-
-
 
 return weapons
