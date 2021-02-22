@@ -9,12 +9,11 @@ blam = require "blam"
 tagClasses = blam.tagClasses
 objectClasses = blam.objectClasses
 
--- Project modules
-local core = require "theflood.core"
+local abilities = require "theflood.abilities"
 local weapons = require "theflood.weapons"
 
 function OnTick()
-    weapons.animateCrosshairs()
+    abilities.thruster()
     weapons.rotateWeaponsInPads()
 end
 

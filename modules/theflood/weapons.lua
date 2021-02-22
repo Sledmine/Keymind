@@ -114,6 +114,4 @@ function weapons.rotateWeaponsInPads() --Weapon Pad for Rotating weapons
     end
 end
 
-
-
 return weapons
