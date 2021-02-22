@@ -9,13 +9,8 @@ blam = require "blam"
 tagClasses = blam.tagClasses
 objectClasses = blam.objectClasses
 
--- Project modules
-local core = require "theflood.core"
-local weapons = require "theflood.weapons"
-
 function OnTick()
-    weapons.animateCrosshairs()
-    weapons.rotateWeaponsInPads()
+
 end
 
 set_callback("tick", "OnTick")
