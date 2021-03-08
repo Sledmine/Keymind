@@ -3,6 +3,39 @@ local thrusterAvailable = true
 local jetpackHeat = 10
 local player = blam.biped(get_dynamic_player())
 
+--[[
+    Review by Sled:
+
+    These are global functions stored in a module that has local functions it does not make sense
+    In general modules should not have global functions at all, the idea behind a module is to
+    isolate functions among the module, so creating a global function is not following this pattern
+
+    Functions used internally by the module should be local non exposed functions, example:
+
+    local function ResetThruster()
+    
+    end
+
+
+    And called where needed this way:
+
+    ResetThruster()
+
+
+    In order use them in a exposed function they should be called like this:
+
+    function abilities.myPublicFunction()
+        ResetThruster()
+    end
+
+
+
+    If you need to expose a public function then the function should be like this:
+
+    function abilities.ResetThruster()
+    end
+
+]]
 function ResetThruster()
     console_out("Thruster Is Ready")
     thrusterAvailable = true

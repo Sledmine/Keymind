@@ -6,6 +6,8 @@ local hsc = require "hsc"
 This is a template string that can be formatted later
 %s will be replaced by a string value later, example:
 
+local encounterNameTemplate = "Oleada%s_Op%s"
+
 console_out(encounterNameTemplate:format("1", "A"))
 
 Will result into:
